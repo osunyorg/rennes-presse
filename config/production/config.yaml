@@ -2,6 +2,11 @@
 
 baseURL: https://presse.rennes.osuny.site
 
+## OSUNY
+osuny:
+  website:
+    id: cb8b7ddb-129e-4084-9fb0-70d4794a08c3
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
