@@ -2,7 +2,7 @@
 
 fr:
   title: >-
-    Presse
+    Espace presse
   contentDir: content/fr
   languageCode: fr
   languageName: Français
@@ -10,9 +10,9 @@ fr:
     contact_details:
 
   permalinks:
+    events: /agenda/:year-:month-:day-:slug/
+    events_categories: /agenda/:slug/
     pages_categories: /:slug/
-    posts: /actualites/:year-:month-:day-:slug/
-    posts_categories: /actualites/:slug/
   taxonomies:
     administrator: administrators
     author: authors
