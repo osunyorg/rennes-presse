@@ -1,10 +1,2 @@
-theme: osuny
+theme: rennes-hugo-theme
 _merge: deep
-params:
-  summary:
-    position: hero
-  search:
-    active: true
-  logo:
-    header: ''
-    footer: ''
