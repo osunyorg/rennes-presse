@@ -1,20 +1,6 @@
 ---
 title: Menu principal
 items:
-- title: Organisations
-  target: "/organisations/"
-  kind: page
-  new_tab: false
-  children: []
-  path: "/organizations"
-  file: content/fr/organizations/_index.html
-- title: Agenda
-  target: "/agenda/"
-  kind: page
-  new_tab: false
-  children: []
-  path: "/events"
-  file: content/fr/events/_index.html
 - title: Communiqués de presse
   target: "/communiques-de-presse/"
   kind: page
@@ -22,4 +8,11 @@ items:
   children: []
   path: "/pages/communiques-de-presse"
   file: content/fr/pages/communiques-de-presse/_index.html
+- title: Agenda
+  target: "/agenda/"
+  kind: page
+  new_tab: false
+  children: []
+  path: "/events"
+  file: content/fr/events/_index.html
 
