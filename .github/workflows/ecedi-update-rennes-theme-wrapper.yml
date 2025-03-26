@@ -1,0 +1,10 @@
+name: ecedi - Update Rennes theme submodule
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-rennes-theme:
+    uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-update-rennes-theme.yml@main
+    secrets:
+      ECEDI_PAT_TOKEN: ${{ secrets.ECEDI_PAT_TOKEN }}
