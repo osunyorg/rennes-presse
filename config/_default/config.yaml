@@ -1,2 +1,6 @@
 theme: rennes-hugo-theme
 _merge: deep
+params:
+  home:
+    head:
+      title: both # both | page | site
