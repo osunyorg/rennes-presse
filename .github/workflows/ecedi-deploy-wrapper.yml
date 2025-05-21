@@ -1,0 +1,14 @@
+name: ecedi - Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  update-rennes-theme:
+    uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-deploy.yml@main
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.ECEDI_SSH_PRIVATE_KEY }}
+      SSH_HOST: ${{ secrets.ECEDI_SSH_HOST }}
+      SSH_USER: ${{ secrets.ECEDI_SSH_USER }}
+      SSH_WORKDIR: ${{ secrets.ECEDI_SSH_WORKDIR }}
