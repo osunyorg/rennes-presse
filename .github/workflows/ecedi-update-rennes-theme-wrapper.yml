@@ -1,7 +1,11 @@
-name: ecedi - Update Rennes theme submodule
+name: ecedi - Update Theme submodule
 
 on:
   workflow_dispatch:
+    inputs:
+      submodule_path:
+        required: true
+        type: string
 
 jobs:
   update-rennes-theme:
