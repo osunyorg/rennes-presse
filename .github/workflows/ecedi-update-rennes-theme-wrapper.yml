@@ -10,5 +10,7 @@ on:
 jobs:
   update-rennes-theme:
     uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-update-rennes-theme.yml@main
+    with:
+      submodule_path: ${{ inputs.submodule_path }}
     secrets:
       ECEDI_PAT_TOKEN: ${{ secrets.ECEDI_PAT_TOKEN }}
