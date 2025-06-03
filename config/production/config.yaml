@@ -20,8 +20,3 @@ deployment:
     - pattern: "^.+\\.(png|jpg|jpeg|gif|webp)$"
       cacheControl: "max-age=31536000, no-transform, public"
       gzip: false
-  ## DEUXFLEURS
-  workers: 2
-  targets:
-    - name: "production"
-      URL: "s3://espace-presse-rennes-ville-et-metropole.rennes.osuny.site?endpoint=garage.deuxfleurs.fr&s3ForcePathStyle=true&region=garage&awssdk=v1"
