@@ -2,10 +2,12 @@
 title: Informations légales
 items:
 - title: Plan du site
+  slug: plan-du-site
   target: "/plan-du-site/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/plan-du-site"
   file: content/fr/pages/plan-du-site/_index.html
 
