@@ -1,18 +1,22 @@
 ---
 title: Menu principal
 items:
-- title: Communiqués de presse
+- title: Communiqués et dossiers de presse
+  slug: communiques-et-dossiers-de-presse
   target: "/communiques-de-presse/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/communiques-de-presse"
   file: content/fr/pages/communiques-de-presse/_index.html
 - title: Agenda
+  slug: agenda
   target: "/agenda/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/events"
   file: content/fr/events/_index.html
 
