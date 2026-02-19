@@ -13,3 +13,4 @@ jobs:
       SSH_HOST: ${{ secrets.ECEDI_SSH_HOST }}
       SSH_USER: ${{ secrets.ECEDI_SSH_USER }}
       SSH_WORKDIR: ${{ secrets.ECEDI_SSH_WORKDIR }}
+      MM_WEBHOOK_URL: ${{ secrets.ECEDI_MATTERMOST_WEBHOOK_URL }}
