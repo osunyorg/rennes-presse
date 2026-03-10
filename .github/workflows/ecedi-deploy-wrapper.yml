@@ -1,13 +1,20 @@
-name: ecedi - Deployment
+name: ecedi - Deploy Wrapper
 
 on:
   push:
     branches: ['main']
   workflow_dispatch:
+    inputs:
+      retry_count:
+        description: 'Number of retries already performed'
+        required: false
+        default: '0'
 
 jobs:
-  update-rennes-theme:
+  deploy:
     uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-deploy.yml@main
+    with:
+      retry_count: ${{ fromJSON(inputs.retry_count) || '0'}}
     secrets:
       SSH_PRIVATE_KEY: ${{ secrets.ECEDI_SSH_PRIVATE_KEY }}
       SSH_HOST: ${{ secrets.ECEDI_SSH_HOST }}
