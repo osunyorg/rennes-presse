@@ -14,7 +14,7 @@ jobs:
   deploy:
     uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-deploy.yml@main
     with:
-      retry_count: ${{ fromJSON(inputs.retry_count) || '0'}}
+      retry_count: ${{ fromJSON(github.event.inputs.retry_count || '0') }}
     secrets:
       SSH_PRIVATE_KEY: ${{ secrets.ECEDI_SSH_PRIVATE_KEY }}
       SSH_HOST: ${{ secrets.ECEDI_SSH_HOST }}
