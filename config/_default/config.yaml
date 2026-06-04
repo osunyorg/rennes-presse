@@ -4,3 +4,11 @@ params:
   home:
     head:
       title: both # both | page | site
+  posts:
+    index:
+      layout: grid # grid | list
+      options:
+        summary: false
+        image: false
+    share_links:
+      enabled: false
