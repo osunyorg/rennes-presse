@@ -1,2 +1,6 @@
 custom:
   site: 'Espace presse'
+  search:
+    label: Rechercher dans l'espace presse
+    placeholder: Rechercher dans l'espace presse...
+    submit: Rechercher dans l'espace presse
