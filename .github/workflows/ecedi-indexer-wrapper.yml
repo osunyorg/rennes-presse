@@ -1,0 +1,48 @@
+name: ecedi - Content indexation
+
+on:
+  workflow_run:
+    workflows: ['ecedi - Deploy Wrapper']
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        type: choice
+        required: true
+        options: [ staging, production ]
+
+jobs:
+  run-indexer-auto:
+    if: ${{ github.event_name == 'workflow_run' }}
+    uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-search-engine-indexer.yml@main
+    with:
+      api_url: ${{ vars.ECEDI_INDEXER_API_URL }}
+      app_env: production
+    secrets:
+      ECEDI_INDEXER_API_KEY: ${{ secrets.ECEDI_INDEXER_API_KEY }}
+      ECEDI_API_BASIC_AUTH: ${{ secrets.ECEDI_API_BASIC_AUTH }}
+      MM_WEBHOOK_URL: ${{ secrets.ECEDI_MATTERMOST_WEBHOOK_URL }}
+
+  run-indexer-manual-production:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.environment == 'production' }}
+    uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-search-engine-indexer.yml@main
+    with:
+      api_url: ${{ vars.ECEDI_INDEXER_API_URL }}
+      app_env: production
+    secrets:
+      ECEDI_INDEXER_API_KEY: ${{ secrets.ECEDI_INDEXER_API_KEY }}
+      ECEDI_API_BASIC_AUTH: ${{ secrets.ECEDI_API_BASIC_AUTH }}
+      MM_WEBHOOK_URL: ${{ secrets.ECEDI_MATTERMOST_WEBHOOK_URL }}
+
+  run-indexer-manual-staging:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.environment == 'staging' }}
+    uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-search-engine-indexer.yml@staging
+    with:
+      api_url: ${{ vars.ECEDI_INDEXER_API_URL_STAGING }}
+      app_env: staging
+    secrets:
+      ECEDI_INDEXER_API_KEY: ${{ secrets.ECEDI_INDEXER_API_KEY_STAGING }}
+      ECEDI_API_BASIC_AUTH: ${{ secrets.ECEDI_API_BASIC_AUTH_STAGING }}
+      MM_WEBHOOK_URL: ${{ secrets.ECEDI_MATTERMOST_WEBHOOK_URL }}
