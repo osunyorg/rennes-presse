@@ -4,3 +4,10 @@
 [submodule "themes/rennes-hugo-theme"]
 	path = themes/rennes-hugo-theme
 	url = git@github.com:osunyorg/rennes-theme.git
+[submodule "modules/search-engine-indexer"]
+	path = modules/search-engine-indexer
+	url = https://github.com/osunyorg/rennes-search-engine-indexer.git
+[submodule "modules/search-engine-indexer-staging"]
+	path = modules/search-engine-indexer-staging
+	url = https://github.com/osunyorg/rennes-search-engine-indexer.git
+	branch = staging
