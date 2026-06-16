@@ -1,6 +1,16 @@
 theme: rennes-hugo-theme
 _merge: deep
 params:
+  # RENNES THEME CUSTOM
+  custom:
+    search:
+      active: true
+      index: "presse"
+      # @DEV : see i18n folder for texts
+
+  # OSUNY THEME
+  search:
+    active: false
   home:
     head:
       title: both # both | page | site
