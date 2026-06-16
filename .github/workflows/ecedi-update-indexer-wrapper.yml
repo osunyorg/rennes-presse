@@ -1,0 +1,10 @@
+name: ecedi - Update indexer submodule
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-indexer:
+    uses: ecedi/rennes-ville-metropole-workflows/.github/workflows/ecedi-update-search-engine-indexer.yml@main
+    secrets:
+      ECEDI_PAT_TOKEN: ${{ secrets.ECEDI_PAT_TOKEN }}
