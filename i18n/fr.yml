@@ -4,7 +4,7 @@ posts:
   next: Communiqué suivant
   none: Aucun communiqué publié
   previous: Communiqué précédent
-  see_all: Voir tous les communiqué
+  see_all: Voir tous les communiqués
   see_all_in_program: Voir tous les communiqués de la formation
   see_all_in_category: Voir tous les communiqués “{{ .Title }}”
   title: Communiqués
