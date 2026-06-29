@@ -1,7 +1,9 @@
 #ECEDI INDEXER CONFIG
 content_dirs:
   - /content/fr/pages
+  - /content/fr/posts
 exclude_dirs:
+  - /content/fr/posts/_index.html
   - /content/fr/pages/plan-du-site
 has_thematic: false
 taxonomies:
