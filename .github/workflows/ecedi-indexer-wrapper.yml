@@ -1,10 +1,10 @@
 name: ecedi - Content indexation
 
 on:
-  # workflow_run:
-  #  workflows: ['ecedi - Deploy Wrapper']
-  #  types:
-  #    - completed
+  workflow_run:
+    workflows: ['ecedi - Deploy Wrapper']
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       environment:
